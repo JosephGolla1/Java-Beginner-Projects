@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class DistanceFromAverage
+{
+    public static void main(String[] args)
+    {
+        int count = 0;
+        double total = 0; // Variable to store the total sum as a double
+        Scanner input = new Scanner(System.in);
+        String[] num = new String[15];
+
+        for(int x = 0; x < num.length; x++)
+        {
+            System.out.print("Enter a numeric value or 99999 to quit >>");
+            num[x] = input.nextLine();
+
+            if(num[x].equals("99999"))
+            {
+                break;
+            }
+            // Parse the input as a double and add it to the total
+            total += Double.parseDouble(num[x]);
+            count++;
+        }
+
+        // Calculate average only if count is greater than 0 to avoid division by zero
+        double average = total/count;
+        System.out.println("You entered " + count + " numbers and their average is " + average);
+        for(int x = 0; x < count; x++)
+        {
+            double currentNumber = Double.parseDouble(num[x]);
+            double distance = currentNumber - average;
+            System.out.println(currentNumber + " is " + distance + " away from the average");
+        }
+    }
+}
