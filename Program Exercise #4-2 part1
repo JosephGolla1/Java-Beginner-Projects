@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Lease {
+    private String name;
+    private double aptNumber;
+    private double rent;
+    private int term;
+
+    public Lease(String name, double aptNumber, double rent, int term) {
+        this.name = name;
+        this.aptNumber = aptNumber;
+        this.rent = rent;
+        this.term = term;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getAptNumber() {
+        return aptNumber;
+    }
+
+    public void setAptNumber(double aptNumber) {
+        this.aptNumber = aptNumber;
+    }
+
+    public double getRent() {
+        return rent;
+    }
+
+    public void setRent(double rent) {
+        this.rent = rent;
+    }
+
+    public int getTerm() {
+        return term;
+    }
+
+    public void setTerm(int term) {
+        this.term = term;
+    }
+
+    public static void main(String[] args) {
+        // Example usage of the Lease class
+        Lease lease = new Lease("John Doe", 101, 1200.0, 12);
+
+        // Display lease details
+        System.out.println("Name: " + lease.getName());
+        System.out.println("Apartment Number: " + lease.getAptNumber());
+        System.out.println("Rent: $" + lease.getRent());
+        System.out.println("Term: " + lease.getTerm() + " months");
+    }
+}
