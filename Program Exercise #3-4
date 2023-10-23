@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Percentages
+{
+    public static void main(String[] args){
+        double one;
+        double two;
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("What is the first number?");
+        one = input.nextDouble();
+        System.out.println("What is the second number?");
+        two = input.nextDouble();
+
+        computePercent(one, two);
+    }
+
+    public static void computePercent(double one, double two){
+        
+        System.out.println("The percentage is: " + (one / two) * 100 + "%");
+        System.out.println("The percentage is: " + (two / one) * 100 + "%");
+    }
+}
