@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class BabyNameComparison
+{
+    public static void main(String[] args)
+    {
+        String name1, name2, name3;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a name >> ");
+        name1 = input.nextLine();
+        System.out.print("Enter a second name >> ");
+        name2 = input.nextLine();
+        System.out.print("Enter a third name >> ");
+        name3 = input.nextLine();
+        Combination(name1,name2,name3);
+        Combination(name2,name1,name3);
+        Combination(name3,name1,name2);
+
+        
+    }
+    public static void Combination(String n1 , String n2, String n3)
+    {
+        System.out.println(n1 + " " + n2);
+        System.out.println(n1 + " " + n3);
+
+
+    }
+}
