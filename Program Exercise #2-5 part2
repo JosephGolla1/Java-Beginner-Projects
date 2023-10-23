@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class MileConversionsInteractive{
+
+
+    public static void main(String[] args){
+        double miles;
+
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("How many miles to convert?");
+        miles = input.nextDouble();
+        double inches = miles * 63360;
+        double feet = miles * 5280;
+        double yards = miles * 1760;
+
+        System.out.print("There is " + (inches) + " inches, " + (feet) + " feet, " + (yards) + " yards, in " + (miles) + " miles");
+    }
+};
