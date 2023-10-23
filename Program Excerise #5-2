@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class AscendingAndDescending
+{
+    public static void main(String[] args)
+    {
+        int highest, lowest, middle;
+        int one, two, three;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter an integer...");
+        one = input.nextInt();
+        System.out.print("And another...");
+        two = input.nextInt();
+        System.out.print("And just one more...");
+        three = input.nextInt();
+        highest = one;
+        lowest = two;
+        middle = three;
+
+
+
+        if(one < two && three < two)
+            highest = two;
+        else if(one < three && two < three)
+                highest = three;
+if(one < two && one < three )
+    lowest = one;
+else if(two < one && two < three)
+    lowest = two;
+else
+    lowest = three;
+if(one > lowest && one < highest)
+    middle = one;
+if(two > lowest && two < highest)
+            middle = two;
+else
+    middle = three;
+        System.out.println("Ascending: " + lowest + " " + middle + " " + highest );
+        System.out.println("Descending: " + highest + " " + middle + " " + lowest);
+    }
+}
