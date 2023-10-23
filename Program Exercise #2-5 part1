@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class MileConversions{
+
+
+    public static void main(String[] args){
+        double miles = 1;
+
+
+        Scanner input = new Scanner(System.in);
+        double INCHES_IN_MILE = miles * 63360;
+        double FEET_IN_MILE = miles * 5280;
+        double YARDS_IN_MILE = miles * 1760;
+
+        System.out.println("There is " + (INCHES_IN_MILE) + " inches"+ " in " + (miles) + "miles" );
+        System.out.println("There is " + (FEET_IN_MILE) + " feet"+ " in " + (miles) + "miles" );
+        System.out.println("There is " + (YARDS_IN_MILE) + " yards" + " in " + (miles) + "miles" );
+    }
+};
