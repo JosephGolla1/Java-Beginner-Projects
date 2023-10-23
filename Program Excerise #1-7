@@ -1,0 +1,12 @@
+
+public class MovieQuoteInfo{
+
+    public static void output()
+    {
+        System.out.println("Hello World!");
+        System.out.println("Hello World!");
+        System.out.println("Hello World!");
+        System.out.println("Hello World!");
+        
+    }
+}
