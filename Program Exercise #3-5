@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class BookstoreCredit
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter your name >> ");
+        String name = input.nextLine();
+        System.out.print("Enter you GPA >> ");
+        double gpa = input.nextDouble();
+        computeDiscount(name, gpa);
+
+    }
+    public static void computeDiscount(String studentName, double GPA)
+    {
+        System.out.println(studentName + " your GPA of " + GPA + ", has earned you a bookstore credit of $" + (GPA * 10));
+    }
+} 
