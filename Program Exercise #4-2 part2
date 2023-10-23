@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class TestLease {
+    public static void main(String[] args) {
+        // Creating four Lease objects
+        Lease lease1 = getData();
+        Lease lease2 = getData();
+        Lease lease3 = getData();
+        Lease lease4 = getData();
+
+        // Displaying lease details using the showValues method
+        showValues(lease1);
+        showValues(lease2);
+        showValues(lease3);
+        showValues(lease4);
+    }
+
+    // Method to get Lease object based on user input
+    public static Lease getData() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter tenant name: ");
+        String name = input.nextLine();
+
+        System.out.print("Enter apartment number: ");
+        double aptNumber = input.nextDouble();
+
+        System.out.print("Enter monthly rent: $");
+        double rent = input.nextDouble();
+
+        System.out.print("Enter lease term (in months): ");
+        int term = input.nextInt();
+
+        return new Lease(name, aptNumber, rent, term);
+    }
+
+    // Method to display Lease object details
+    public static void showValues(Lease lease) {
+        System.out.println("\nLease Details:");
+        System.out.println("Tenant Name: " + lease.getName());
+        System.out.println("Apartment Number: " + lease.getAptNumber());
+        System.out.println("Monthly Rent: $" + lease.getRent());
+        System.out.println("Lease Term: " + lease.getTerm() + " months");
+
+        // Adding a pet fee and explaining the pet policy
+        lease.addPetFee();
+        lease.explainPetPolicy();
+        System.out.println("Total Rent (with pet fee): $" + lease.getRent());
+    }
+}
