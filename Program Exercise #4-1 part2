@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class TestSandwich
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        String mainIngredient;
+        String bread;
+        double price;
+        System.out.print("Enter main sandwich ingredient >> ");
+        mainIngredient = input.nextLine();
+        System.out.print("Enter bread type >> ");
+        bread = input.nextLine();
+        System.out.print("Enter sandwich price >>");
+        price = input.nextDouble();
+
+        System.out.print("You have ordered a " + mainIngredient + " sandwich on " + bread + " bread, and the price is $" + price);
+
+    }
+}
