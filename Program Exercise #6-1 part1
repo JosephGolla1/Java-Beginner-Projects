@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class CountByFives
+{
+    public static void main(String args[])
+    {
+        Scanner input = new Scanner(System.in);
+        int START = 5;
+        int STOP = 500;
+        int lines = 0;
+        int NUMBERLINE =10;
+
+        for(int i = START; i <= STOP; i+= 5)
+        {
+
+            System.out.print(i + " ");
+
+            if(lines == NUMBERLINE - 1)
+            {
+                lines = 0;
+                System.out.println(" ");
+
+            } else
+            {
+                lines++;
+            }
+
+        }
+    }
+}
