@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class CountByAnything
+{
+    public static void main(String args[])
+    {
+        int START;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter number to count by ");
+        START = input.nextInt();
+
+        int STOP = START * 70;
+        int lines = 0;
+        int NUMBERLINE =10;
+
+        for(int i = START; i <= STOP; i+= START)
+        {
+
+            System.out.print(i + " ");
+
+            if(lines == NUMBERLINE - 1)
+            {
+                lines = 0;
+                System.out.println(" ");
+
+            } else
+            {
+                lines++;
+            }
+
+        }
+    }
+}
